@@ -15,10 +15,20 @@ public class CCuenta {
     private double saldo;
     private double tipoInterés;
 
+    /**
+     *
+     */
     public CCuenta()
     {
     }
 
+    /**
+     *
+     * @param nom nombre
+     * @param cue cuenta
+     * @param sal saldo
+     * @param tipo tipo
+     */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         nombre =nom;
@@ -26,11 +36,20 @@ public class CCuenta {
         saldo=sal;
     }
 
+    /**
+     *
+     * @return saldo
+     */
     public double estado()
     {
         return getSaldo();
     }
 
+    /**
+     *
+     * @param cantidad cantidad ingresada
+     * @throws Exception Exception
+     */
     public void ingresar(double cantidad) throws Exception
     {
         if (cantidad<0)
@@ -38,6 +57,11 @@ public class CCuenta {
         setSaldo(getSaldo() + cantidad);
     }
 
+    /**
+     *
+     * @param cantidad cantidad retirada
+     * @throws Exception Exception
+     */
     public void retirar(double cantidad) throws Exception
     {
         if (cantidad <= 0)
